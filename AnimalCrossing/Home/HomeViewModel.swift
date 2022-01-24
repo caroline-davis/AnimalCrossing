@@ -15,19 +15,35 @@ class HomeViewModel {
 
     // https://acnhapi.com/v1/villagers/{villagerID}
 
-    let villagerURL = URL(string: "https://acnhapi.com/v1/villagers/11")
+    var villagerNumber: String {
+        var number = ""
+        for _ in 1...50 {
+            number = String(Int.random(in: 1..<50))
+        }
+        return number
+    }
+
+    func villageUrl() -> URL {
+        var number = ""
+        for _ in 1...50 {
+            number = String(Int.random(in: 1..<50))
+        }
+        return URL(string: "https://acnhapi.com/v1/villagers/\(number)") ?? URL(string:"https://acnhapi.com/v1/villagers/1")!
+    }
+
 
     func getVillagers() -> AnyPublisher<Villager, Error> {
 
         let villagerPublisher = URLSession
             .shared
-            .dataTaskPublisher(for: villagerURL!)
+            .dataTaskPublisher(for: villageUrl())
             .subscribe(on: DispatchQueue.global(qos: .background))
             .handleEvents(receiveSubscription: { _ in
                 DispatchQueue
                     .main
                     .async {
-//                       add spinner here
+                        //                       add spinner here
+                        print("loading...")
                     }
             })
             .map { $0.data }

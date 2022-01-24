@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F0EC8F8A279A601A00CFB5C1 /* VillagerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC8F89279A601A00CFB5C1 /* VillagerRequest.swift */; };
+		F0EC8F8A279A601A00CFB5C1 /* Villager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC8F89279A601A00CFB5C1 /* Villager.swift */; };
 		F0F067A2279A25F50026EE6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F067A1279A25F50026EE6A /* AppDelegate.swift */; };
 		F0F067A4279A25F50026EE6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F067A3279A25F50026EE6A /* SceneDelegate.swift */; };
 		F0F067A6279A25F50026EE6A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F067A5279A25F50026EE6A /* HomeViewController.swift */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F0EC8F89279A601A00CFB5C1 /* VillagerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagerRequest.swift; sourceTree = "<group>"; };
+		F0EC8F89279A601A00CFB5C1 /* Villager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Villager.swift; sourceTree = "<group>"; };
 		F0F0679E279A25F50026EE6A /* AnimalCrossing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F067A1279A25F50026EE6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0F067A3279A25F50026EE6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		F0EC8F8B279A610A00CFB5C1 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				F0EC8F89279A601A00CFB5C1 /* VillagerRequest.swift */,
+				F0EC8F89279A601A00CFB5C1 /* Villager.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 				F0F067A2279A25F50026EE6A /* AppDelegate.swift in Sources */,
 				F0F067A4279A25F50026EE6A /* SceneDelegate.swift in Sources */,
 				F0F067B7279A273C0026EE6A /* HomeViewModel.swift in Sources */,
-				F0EC8F8A279A601A00CFB5C1 /* VillagerRequest.swift in Sources */,
+				F0EC8F8A279A601A00CFB5C1 /* Villager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

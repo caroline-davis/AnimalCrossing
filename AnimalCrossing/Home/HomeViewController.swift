@@ -15,12 +15,16 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var villagerImageView: UIImageView!
-
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var birthdayLabel: UILabel!
+    @IBOutlet weak var personalityLabel: UILabel!
+    @IBOutlet weak var speciesLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var hobbyLabel: UILabel!
+    @IBOutlet weak var catchPhraseLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInitialItems()
-        setStyles()
 
         homeViewModel
             .getVillagers()
@@ -28,19 +32,27 @@ class HomeViewController: UIViewController {
             .sink { res in
                 print("data: \(res)")
             } receiveValue: { [weak self] (val) in
-                print("this", val)
+                self?.nameLabel.text = val.name["name-USen"] ?? "-"
+                self?.birthdayLabel.text = val.birthday
+                self?.personalityLabel.text = val.personality
+                self?.speciesLabel.text = val.species
+                self?.genderLabel.text = val.gender
+                self?.hobbyLabel.text = val.hobby
+                self?.catchPhraseLabel.text = val.catchPhrase
             }
             .store(in: &subscriptions)
+
+        setInitialItems()
+        setStyles()
     }
 
     func setInitialItems() {
         headingLabel.text = homeViewModel.heading
+
     }
 
     func setStyles() {
         headingLabel.textColor = .white
     }
 
-
 }
-
