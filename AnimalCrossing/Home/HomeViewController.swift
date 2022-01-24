@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var hobbyLabel: UILabel!
     @IBOutlet weak var catchPhraseLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,13 @@ class HomeViewController: UIViewController {
             .sink { res in
                 print("data: \(res)")
             } receiveValue: { [weak self] (val) in
-                // To do: fix the image view url
-//                self?.villagerImageView.send(val.imageUrl)
+                // Note: not sure if best way with Combine but couldnt figure out how to change 1 data type to UIImage, with the rest as data
+                let imgURL = URL(string: val.imageUrl)!
+                let data = try? Data(contentsOf: imgURL)
+                if let imageData = data {
+                    let image = UIImage(data: imageData)
+                    self?.villagerImageView.image = image
+                }
 
                 self?.nameLabel.text = val.name["name-USen"] ?? "-"
                 self?.birthdayLabel.text = "\(self?.homeViewModel.birthday ?? "") \(val.birthday)"
@@ -41,7 +47,7 @@ class HomeViewController: UIViewController {
                 self?.speciesLabel.text = "\(self?.homeViewModel.species ?? "") \(val.species)"
                 self?.genderLabel.text = "\(self?.homeViewModel.gender ?? "") \(val.gender)"
                 self?.hobbyLabel.text = "\(self?.homeViewModel.hobby ?? "") \(val.hobby)"
-                self?.catchPhraseLabel.text = "\(self?.homeViewModel.catchPhrase ?? "") \(val.catchPhrase)"
+                self?.catchPhraseLabel.text = "\(self?.homeViewModel.catchPhrase ?? "") \(val.catchPhrase.capitalized)"
             }
             .store(in: &subscriptions)
 
@@ -56,6 +62,10 @@ class HomeViewController: UIViewController {
 
     func setStyles() {
         headingLabel.textColor = .white
+        containerView.layer.cornerRadius = 5
+        villagerImageView.layer.cornerRadius = 5
+
+
     }
 
 }
