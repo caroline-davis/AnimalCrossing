@@ -16,10 +16,12 @@ public struct Villager: Codable {
     public var gender: String
     public var hobby: String
     public var catchPhrase: String
+    public var imageUrl: String
 
     enum CodingKeys: String, CodingKey {
         case catchPhrase = "catch-phrase"
         case birthday = "birthday-string"
+        case imageUrl = "image_uri"
         case id
         case name
         case personality
@@ -35,7 +37,8 @@ public struct Villager: Codable {
                 species: String,
                 hobby: String,
                 name: [String: String],
-                catchPhrase: String) {
+                catchPhrase: String,
+                imageUrl: String) {
         self.id = id
         self.name = name
         self.birthday = birthday
@@ -44,5 +47,6 @@ public struct Villager: Codable {
         self.gender = gender
         self.hobby = hobby
         self.catchPhrase = catchPhrase
+        self.imageUrl = imageUrl
     }
 }

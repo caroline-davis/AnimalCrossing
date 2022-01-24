@@ -32,13 +32,16 @@ class HomeViewController: UIViewController {
             .sink { res in
                 print("data: \(res)")
             } receiveValue: { [weak self] (val) in
+                // To do: fix the image view url
+//                self?.villagerImageView.send(val.imageUrl)
+
                 self?.nameLabel.text = val.name["name-USen"] ?? "-"
-                self?.birthdayLabel.text = val.birthday
-                self?.personalityLabel.text = val.personality
-                self?.speciesLabel.text = val.species
-                self?.genderLabel.text = val.gender
-                self?.hobbyLabel.text = val.hobby
-                self?.catchPhraseLabel.text = val.catchPhrase
+                self?.birthdayLabel.text = "\(self?.homeViewModel.birthday ?? "") \(val.birthday)"
+                self?.personalityLabel.text = "\(self?.homeViewModel.personality ?? "") \(val.personality)"
+                self?.speciesLabel.text = "\(self?.homeViewModel.species ?? "") \(val.species)"
+                self?.genderLabel.text = "\(self?.homeViewModel.gender ?? "") \(val.gender)"
+                self?.hobbyLabel.text = "\(self?.homeViewModel.hobby ?? "") \(val.hobby)"
+                self?.catchPhraseLabel.text = "\(self?.homeViewModel.catchPhrase ?? "") \(val.catchPhrase)"
             }
             .store(in: &subscriptions)
 

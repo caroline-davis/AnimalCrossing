@@ -12,18 +12,16 @@ import Combine
 class HomeViewModel {
 
     var heading = "Animal Crossing"
+    var birthday = "Birthday:"
+    var personality = "Personality:"
+    var species = "Species:"
+    var gender = "Gender:"
+    var hobby = "Hobby:"
+    var catchPhrase = "Catch Phrase:"
 
     // https://acnhapi.com/v1/villagers/{villagerID}
 
-    var villagerNumber: String {
-        var number = ""
-        for _ in 1...50 {
-            number = String(Int.random(in: 1..<50))
-        }
-        return number
-    }
-
-    func villageUrl() -> URL {
+    func villagerUrl() -> URL {
         var number = ""
         for _ in 1...50 {
             number = String(Int.random(in: 1..<50))
@@ -36,7 +34,7 @@ class HomeViewModel {
 
         let villagerPublisher = URLSession
             .shared
-            .dataTaskPublisher(for: villageUrl())
+            .dataTaskPublisher(for: villagerUrl())
             .subscribe(on: DispatchQueue.global(qos: .background))
             .handleEvents(receiveSubscription: { _ in
                 DispatchQueue
