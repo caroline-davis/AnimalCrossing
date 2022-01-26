@@ -23,14 +23,14 @@ class HomeViewModel {
 
     func villagerUrl() -> URL {
         var number = ""
-        for _ in 1...50 {
-            number = String(Int.random(in: 1..<50))
+        for _ in 1...390 {
+            number = String(Int.random(in: 1..<390))
         }
         return URL(string: "https://acnhapi.com/v1/villagers/\(number)") ?? URL(string:"https://acnhapi.com/v1/villagers/1")!
     }
 
 
-    func getVillagers() -> AnyPublisher<Villager, Error> {
+    func getVillagers(spinner: UIActivityIndicatorView) -> AnyPublisher<Villager, Error> {
 
         let villagerPublisher = URLSession
             .shared
@@ -40,8 +40,7 @@ class HomeViewModel {
                 DispatchQueue
                     .main
                     .async {
-                        //                       add spinner here
-                        print("loading...")
+                        spinner.startAnimating()
                     }
             })
             .map { $0.data }

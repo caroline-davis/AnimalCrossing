@@ -23,15 +23,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var hobbyLabel: UILabel!
     @IBOutlet weak var catchPhraseLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var spinnerView: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         homeViewModel
-            .getVillagers()
+            .getVillagers(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
             .sink { res in
-                print("data: \(res)")
+                self.spinnerView.stopAnimating()
+                self.spinnerView.isHidden = true
             } receiveValue: { [weak self] (val) in
                 // Note: not sure if best way with Combine but couldnt figure out how to change 1 data type to UIImage, with the rest as data
                 let imgURL = URL(string: val.imageUrl)!
@@ -57,15 +59,11 @@ class HomeViewController: UIViewController {
 
     func setInitialItems() {
         headingLabel.text = homeViewModel.heading
-
     }
 
     func setStyles() {
-        headingLabel.textColor = .white
         containerView.layer.cornerRadius = 5
         villagerImageView.layer.cornerRadius = 5
-
-
     }
 
 }
