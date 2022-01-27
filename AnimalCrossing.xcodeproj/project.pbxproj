@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F03EFD2E27A2443900A21E68 /* ArtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EFD2D27A2443900A21E68 /* ArtTableViewCell.swift */; };
+		F05CC82127A26024004B4206 /* ArtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05CC82027A26024004B4206 /* ArtTableViewCell.xib */; };
+		F067F5D927A2166900518A04 /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5D827A2166900518A04 /* Art.swift */; };
+		F067F5DB27A21CDF00518A04 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5DA27A21CDF00518A04 /* ArtViewController.swift */; };
 		F0EC8F8A279A601A00CFB5C1 /* Villager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EC8F89279A601A00CFB5C1 /* Villager.swift */; };
 		F0F067A2279A25F50026EE6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F067A1279A25F50026EE6A /* AppDelegate.swift */; };
 		F0F067A4279A25F50026EE6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F067A3279A25F50026EE6A /* SceneDelegate.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F03EFD2D27A2443900A21E68 /* ArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtTableViewCell.swift; sourceTree = "<group>"; };
+		F05CC82027A26024004B4206 /* ArtTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtTableViewCell.xib; sourceTree = "<group>"; };
+		F067F5D827A2166900518A04 /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
+		F067F5DA27A21CDF00518A04 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		F0EC8F89279A601A00CFB5C1 /* Villager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Villager.swift; sourceTree = "<group>"; };
 		F0F0679E279A25F50026EE6A /* AnimalCrossing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalCrossing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0F067A1279A25F50026EE6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F067F5D727A214C900518A04 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				F067F5DA27A21CDF00518A04 /* ArtViewController.swift */,
+				F03EFD2D27A2443900A21E68 /* ArtTableViewCell.swift */,
+				F05CC82027A26024004B4206 /* ArtTableViewCell.xib */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
 		F0EC8F88279A5FFA00CFB5C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				F0EC8F89279A601A00CFB5C1 /* Villager.swift */,
+				F067F5D827A2166900518A04 /* Art.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -79,6 +98,7 @@
 				F0EC8F88279A5FFA00CFB5C1 /* Models */,
 				F0F067B5279A271E0026EE6A /* Home */,
 				F0F067A1279A25F50026EE6A /* AppDelegate.swift */,
+				F067F5D727A214C900518A04 /* Art */,
 				F0F067A3279A25F50026EE6A /* SceneDelegate.swift */,
 				F0F067A7279A25F50026EE6A /* Main.storyboard */,
 				F0F067AA279A25F60026EE6A /* Assets.xcassets */,
@@ -154,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05CC82127A26024004B4206 /* ArtTableViewCell.xib in Resources */,
 				F0F067AE279A25F60026EE6A /* LaunchScreen.storyboard in Resources */,
 				F0F067AB279A25F60026EE6A /* Assets.xcassets in Resources */,
 				F0F067A9279A25F50026EE6A /* Main.storyboard in Resources */,
@@ -167,11 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F067F5DB27A21CDF00518A04 /* ArtViewController.swift in Sources */,
 				F0F067A6279A25F50026EE6A /* HomeViewController.swift in Sources */,
 				F0F067A2279A25F50026EE6A /* AppDelegate.swift in Sources */,
+				F03EFD2E27A2443900A21E68 /* ArtTableViewCell.swift in Sources */,
 				F0F067A4279A25F50026EE6A /* SceneDelegate.swift in Sources */,
 				F0F067B7279A273C0026EE6A /* HomeViewModel.swift in Sources */,
 				F0EC8F8A279A601A00CFB5C1 /* Villager.swift in Sources */,
+				F067F5D927A2166900518A04 /* Art.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

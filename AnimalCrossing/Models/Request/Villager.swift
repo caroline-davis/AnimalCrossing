@@ -50,3 +50,55 @@ public struct Villager: Codable {
         self.imageUrl = imageUrl
     }
 }
+
+// EXAMPLE RESPONSE:
+//
+//{
+//   "id":11,
+//   "file-name":"bea03",
+//   "name":{
+//      "name-USen":"Chow",
+//      "name-EUen":"Chow",
+//      "name-EUde":"Chang",
+//      "name-EUes":"Pando",
+//      "name-USes":"Pando",
+//      "name-EUfr":"Chulin",
+//      "name-USfr":"Chulin",
+//      "name-EUit":"Chowchow",
+//      "name-EUnl":"Chow",
+//      "name-CNzh":"朝阳",
+//      "name-TWzh":"朝陽",
+//      "name-JPja":"チャウヤン",
+//      "name-KRko":"츄양",
+//      "name-EUru":"Чау"
+//   },
+//   "personality":"Cranky",
+//   "birthday-string":"July 22nd",
+//   "birthday":"22/7",
+//   "species":"Bear",
+//   "gender":"Male",
+//   "subtype":"B",
+//   "hobby":"Fitness",
+//   "catch-phrase":"aiya",
+//   "icon_uri":"https://acnhapi.com/v1/icons/villagers/11",
+//   "image_uri":"https://acnhapi.com/v1/images/villagers/11",
+//   "bubble-color":"#f2bdc7",
+//   "text-color":"#634b4b",
+//   "saying":"All good things must come to an end.",
+//   "catch-translations":{
+//      "catch-USen":"aiya",
+//      "catch-EUen":"aiya",
+//      "catch-EUde":"hiijaa",
+//      "catch-EUes":"ándale-oso",
+//      "catch-USes":"grinchu",
+//      "catch-EUfr":"lala",
+//      "catch-USfr":"lala",
+//      "catch-EUit":"ehilà",
+//      "catch-EUnl":"kiai",
+//      "catch-CNzh":"有喔",
+//      "catch-TWzh":"有喔",
+//      "catch-JPja":"アルヨ",
+//      "catch-KRko":"그럼",
+//      "catch-EUru":"ай-яй"
+//   }
+//}

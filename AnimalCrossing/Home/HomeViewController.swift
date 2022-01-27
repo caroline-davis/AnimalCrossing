@@ -42,7 +42,6 @@ class HomeViewController: UIViewController {
                     let image = UIImage(data: imageData)
                     self?.villagerImageView.image = image
                 }
-
                 self?.nameLabel.text = val.name["name-USen"] ?? "-"
                 self?.birthdayLabel.text = "\(self?.homeViewModel.birthday ?? "") \(val.birthday)"
                 self?.personalityLabel.text = "\(self?.homeViewModel.personality ?? "") \(val.personality)"

@@ -29,7 +29,6 @@ class HomeViewModel {
         return URL(string: "https://acnhapi.com/v1/villagers/\(number)") ?? URL(string:"https://acnhapi.com/v1/villagers/1")!
     }
 
-
     func getVillagers(spinner: UIActivityIndicatorView) -> AnyPublisher<Villager, Error> {
 
         let villagerPublisher = URLSession
