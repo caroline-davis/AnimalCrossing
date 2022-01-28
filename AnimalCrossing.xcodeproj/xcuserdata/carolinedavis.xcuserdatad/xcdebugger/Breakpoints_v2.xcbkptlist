@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4B5AD80F-BBE5-4418-AB8B-16E760CB1209"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F4CAD76-AF32-4A9D-93DD-8AE824F4F22A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalCrossing/Art/ArtViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2F4CAD76-AF32-4A9D-93DD-8AE824F4F22A - d3008ba4da20fde8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimalCrossing.ArtViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AnimalCrossing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carolinedavis/Documents/SwiftProjects/Early_2022/AnimalCrossing/AnimalCrossing/Art/ArtViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1395">
+               </Location>
+               <Location
+                  uuid = "2F4CAD76-AF32-4A9D-93DD-8AE824F4F22A - 702028bcf83e158a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Error&gt;) -&gt; () in AnimalCrossing.ArtViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AnimalCrossing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carolinedavis/Documents/SwiftProjects/Early_2022/AnimalCrossing/AnimalCrossing/Art/ArtViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "693">
+               </Location>
+               <Location
+                  uuid = "2F4CAD76-AF32-4A9D-93DD-8AE824F4F22A - 684b760f37292574"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (AnimalCrossing.Root) -&gt; () in AnimalCrossing.ArtViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "AnimalCrossing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/carolinedavis/Documents/SwiftProjects/Early_2022/AnimalCrossing/AnimalCrossing/Art/ArtViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "97">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

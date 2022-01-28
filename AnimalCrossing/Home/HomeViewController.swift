@@ -32,8 +32,13 @@ class HomeViewController: UIViewController {
             .getVillagers(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
             .sink { res in
-                self.spinnerView.stopAnimating()
-                self.spinnerView.isHidden = true
+                switch res {
+                case .finished:
+                    self.spinnerView.stopAnimating()
+                    self.spinnerView.isHidden = true
+                case .failure (let error):
+                    print(error)
+                }
             } receiveValue: { [weak self] (val) in
                 // Note: not sure if best way with Combine but couldnt figure out how to change 1 data type to UIImage, with the rest as data
                 let imgURL = URL(string: val.imageUrl)!
