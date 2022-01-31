@@ -159,9 +159,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EQ8-dI-fg0">
-                                <rect key="frame" x="197" y="386" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EQ8-dI-fg0">
+                                <rect key="frame" x="197" y="419.5" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oL3-5S-IJG"/>
@@ -169,7 +168,9 @@
                         <constraints>
                             <constraint firstItem="NOc-3T-XI2" firstAttribute="leading" secondItem="oL3-5S-IJG" secondAttribute="leading" id="AYA-uA-UVB"/>
                             <constraint firstItem="3RN-b6-P6J" firstAttribute="trailing" secondItem="oL3-5S-IJG" secondAttribute="trailing" id="G3l-qQ-1nX"/>
+                            <constraint firstItem="EQ8-dI-fg0" firstAttribute="centerY" secondItem="oL3-5S-IJG" secondAttribute="centerY" constant="1" id="H3I-TM-6Zb"/>
                             <constraint firstItem="RiP-2g-IPv" firstAttribute="top" secondItem="KQw-bm-Uva" secondAttribute="bottom" constant="30" id="JHD-IK-Yds"/>
+                            <constraint firstItem="EQ8-dI-fg0" firstAttribute="centerX" secondItem="oL3-5S-IJG" secondAttribute="centerX" id="Kz4-eL-QoA"/>
                             <constraint firstItem="KQw-bm-Uva" firstAttribute="leading" secondItem="oL3-5S-IJG" secondAttribute="leading" constant="20" id="Ovf-Gp-x09"/>
                             <constraint firstItem="KQw-bm-Uva" firstAttribute="top" secondItem="oL3-5S-IJG" secondAttribute="top" constant="20" id="YWa-pS-LvJ"/>
                             <constraint firstItem="3RN-b6-P6J" firstAttribute="leading" secondItem="oL3-5S-IJG" secondAttribute="leading" id="bHi-BM-QHV"/>

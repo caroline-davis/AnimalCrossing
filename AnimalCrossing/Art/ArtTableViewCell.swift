@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ArtTableViewCell: UITableViewCell {
 
     @IBOutlet weak var artImageView: UIImageView!
@@ -24,11 +23,16 @@ class ArtTableViewCell: UITableViewCell {
     public func configure(with artArray: Art) {
         artLabel.text = artArray.name["name-USen"]?.capitalized
 
+        // this should be used with SDWeb image view pod or something so it doesnt fetch the wrong data if scrolling also somehow with combine potentially too.
         let imgURL = URL(string: artArray.imageUrl)!
-        let data = try? Data(contentsOf: imgURL)
-        if let imageData = data {
-            let image = UIImage(data: imageData)
-            self.artImageView.image = image
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: imgURL) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.artImageView.image = image
+                    }
+                }
+            }
         }
     }
 
