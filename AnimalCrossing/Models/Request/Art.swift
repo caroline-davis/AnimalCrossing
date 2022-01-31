@@ -5,6 +5,8 @@
 //  Created by Caroline Davis on 27/1/22.
 //
 
+// https://swiftsenpai.com/swift/decode-dynamic-keys-json/
+
 import Foundation
 
 public struct Art: Decodable {
@@ -16,6 +18,8 @@ public struct Art: Decodable {
     public var imageUrl: String
     public var imageDescription: String
 
+    public var artFileName: String
+
     enum CodingKeys: String, CodingKey {
         case buyPrice = "buy-price"
         case sellPrice = "sell-price"
@@ -26,20 +30,20 @@ public struct Art: Decodable {
         case hasFake
     }
 
-    public init(id: Int,
-                name: [String: String],
-                hasFake: Bool,
-                buyPrice: Int,
-                sellPrice: Int,
-                imageUrl: String,
-                imageDescription: String) {
-        self.id = id
-        self.name = name
-        self.hasFake = hasFake
-        self.buyPrice = buyPrice
-        self.sellPrice = sellPrice
-        self.imageUrl = imageUrl
-        self.imageDescription = imageDescription
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        // Decode them
+        buyPrice = try container.decode(Int.self, forKey: CodingKeys.buyPrice)
+        sellPrice = try container.decode(Int.self, forKey: CodingKeys.sellPrice)
+        imageUrl = try container.decode(String.self, forKey: CodingKeys.imageUrl)
+        imageDescription = try container.decode(String.self, forKey: CodingKeys.imageDescription)
+        id = try container.decode(Int.self, forKey: CodingKeys.id)
+        name = try container.decode([String:String].self, forKey: CodingKeys.name)
+        hasFake = try container.decode(Bool.self, forKey: CodingKeys.hasFake)
+
+        // Extract artFileName from coding path
+        artFileName = container.codingPath.first!.stringValue
     }
 }
 
@@ -48,7 +52,7 @@ struct ArtResponse: Decodable {
     let artworksArray: [Art]
 
     // Define DynamicCodingKeys type needed for creating
-     // decoding container from JSONDecoder
+    // decoding container from JSONDecoder
     private struct DynamicCodingKeys: CodingKey {
 
         // Use for string-keyed dictionary
@@ -76,14 +80,12 @@ struct ArtResponse: Decodable {
         // Loop through each key (Art name) in container
         for key in container.allKeys {
             // Decode Art using key & keep decoded Art object in tempArray
-            print("this is the key", key)
             let decodedObject = try container.decode(Art.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
             tempArray.append(decodedObject)
-            print(tempArray, "tempArray")
         }
         // 3
         // Finish decoding all Art objects. Thus assign tempArray to array.
-            artworksArray = tempArray
+        artworksArray = tempArray
 
     }
 }

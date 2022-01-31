@@ -13,7 +13,7 @@ class ArtViewModel {
 
     let url = URL(string: "https://acnhapi.com/v1/art/")!
 
-    func getArt() -> AnyPublisher<ArtResponse, Error> {
+    func getArt(spinner: UIActivityIndicatorView) -> AnyPublisher<ArtResponse, Error> {
 
         let artPublisher = URLSession
             .shared
@@ -23,7 +23,7 @@ class ArtViewModel {
                 DispatchQueue
                     .main
                     .async {
-                        //                        spinner.startAnimating()
+                        spinner.startAnimating()
                     }
             })
             .map {

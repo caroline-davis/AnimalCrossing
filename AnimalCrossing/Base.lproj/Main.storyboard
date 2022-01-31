@@ -32,6 +32,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ccD-BE-lfA">
+                                <rect key="frame" x="197" y="418.5" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Redd's Artworks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-pB-tbe">
                                 <rect key="frame" x="93.5" y="68" width="227" height="42"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,12 +46,15 @@
                         <viewLayoutGuide key="safeArea" id="Y4x-qa-Hfw"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.99607843139999996" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ccD-BE-lfA" firstAttribute="centerX" secondItem="Y4x-qa-Hfw" secondAttribute="centerX" id="2qF-Pe-wyD"/>
+                            <constraint firstItem="ccD-BE-lfA" firstAttribute="centerY" secondItem="Y4x-qa-Hfw" secondAttribute="centerY" id="Hjh-8O-hdQ"/>
                             <constraint firstItem="1n0-pB-tbe" firstAttribute="top" secondItem="Y4x-qa-Hfw" secondAttribute="top" constant="24" id="Pgw-j1-lIo"/>
                             <constraint firstItem="1n0-pB-tbe" firstAttribute="centerX" secondItem="Y4x-qa-Hfw" secondAttribute="centerX" id="a4t-oz-zyv"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Art" id="QBM-2L-UCC"/>
                     <connections>
+                        <outlet property="spinnerView" destination="ccD-BE-lfA" id="Jod-L5-wzX"/>
                         <outlet property="tableView" destination="X5S-cJ-UaX" id="lHu-LX-l61"/>
                     </connections>
                 </viewController>

@@ -11,10 +11,11 @@ import Combine
 class ArtViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinnerView: UIActivityIndicatorView!
 
     var artViewModel = ArtViewModel()
-    var subscriptions = Set<AnyCancellable>()
-//    var artworks = [Any]()
+    var subscriptions: [AnyCancellable] = []
+    var models = [Art]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +27,18 @@ class ArtViewController: UIViewController, UITableViewDataSource {
         setStyles()
 
         artViewModel
-            .getArt()
+            .getArt(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
             .sink { result in
                 switch result {
                 case .finished:
-                    print ("finished")
+                    self.spinnerView.stopAnimating()
+                    self.spinnerView.isHidden = true
                 case .failure:
-                    print(result, "result")
                     print("error")
                 }
             } receiveValue: { [weak self] value in
-                print(value)
-//                self?.artworks = value
+                self?.models = value.artworksArray
                 self?.tableView.reloadData()
             }
             .store(in: &subscriptions)
@@ -50,17 +50,18 @@ class ArtViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        print(models.count)
+        return models.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ArtTableViewCell.identifier) as! ArtTableViewCell
-//        cell.configure(with: animals[indexPath.row], imageName: "gear")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ArtTableViewCell.identifier) as? ArtTableViewCell else {
+            fatalError()
+        }
+
+        cell.configure(with: models[indexPath.row])
         cell.layoutMargins = UIEdgeInsets.zero
 
         return cell
     }
-    
-
-
 }

@@ -10,9 +10,6 @@ import Combine
 
 class HomeViewController: UIViewController {
 
-    var homeViewModel = HomeViewModel()
-    var subscriptions = Set<AnyCancellable>()
-
     @IBOutlet weak var headingLabel: UILabel!
     @IBOutlet weak var villagerImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -24,6 +21,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var catchPhraseLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var spinnerView: UIActivityIndicatorView!
+
+    var homeViewModel = HomeViewModel()
+    var subscriptions = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
