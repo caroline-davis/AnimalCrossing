@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SDWebImage
 
 class HomeViewController: UIViewController {
 
@@ -36,6 +37,7 @@ class HomeViewController: UIViewController {
                 case .finished:
                     self.spinnerView.stopAnimating()
                     self.spinnerView.isHidden = true
+                    print("finished: \(Thread.isMainThread)")
                 case .failure (let error):
                     print(error)
                 }

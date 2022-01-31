@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ArtTableViewCell: UITableViewCell {
 
@@ -23,18 +24,12 @@ class ArtTableViewCell: UITableViewCell {
     public func configure(with artArray: Art) {
         artLabel.text = artArray.name["name-USen"]?.capitalized
 
-        // this should be used with SDWeb image view pod or something so it doesnt fetch the wrong data if scrolling also somehow with combine potentially too.
         let imgURL = URL(string: artArray.imageUrl)!
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: imgURL) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.artImageView.image = image
-                    }
-                }
-            }
-        }
+    
+        artImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        artImageView.sd_setImage(with: imgURL)
     }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
