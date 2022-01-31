@@ -7,12 +7,12 @@
 
 import Foundation
 
-public struct Art: Codable {
+public struct Art: Decodable {
     public var id: Int
     public var name: [String: String]
     public var hasFake: Bool
-    public var buyPrice: String
-    public var sellPrice: String
+    public var buyPrice: Int
+    public var sellPrice: Int
     public var imageUrl: String
     public var imageDescription: String
 
@@ -29,8 +29,8 @@ public struct Art: Codable {
     public init(id: Int,
                 name: [String: String],
                 hasFake: Bool,
-                buyPrice: String,
-                sellPrice: String,
+                buyPrice: Int,
+                sellPrice: Int,
                 imageUrl: String,
                 imageDescription: String) {
         self.id = id
@@ -43,6 +43,50 @@ public struct Art: Codable {
     }
 }
 
+struct ArtResponse: Decodable {
+
+    let artworksArray: [Art]
+
+    // Define DynamicCodingKeys type needed for creating
+     // decoding container from JSONDecoder
+    private struct DynamicCodingKeys: CodingKey {
+
+        // Use for string-keyed dictionary
+        var stringValue: String
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+
+        // Use for integer-keyed dictionary
+        var intValue: Int?
+        init?(intValue: Int) {
+            // We are not using this, thus just return nil
+            return nil
+        }
+    }
+
+    init(from decoder: Decoder) throws {
+        // 1
+        // Create a decoding container using DynamicCodingKeys
+        // The container will contain all the JSON first level key
+        let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
+        var tempArray = [Art]()
+
+        // 2
+        // Loop through each key (Art name) in container
+        for key in container.allKeys {
+            // Decode Art using key & keep decoded Art object in tempArray
+            print("this is the key", key)
+            let decodedObject = try container.decode(Art.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
+            tempArray.append(decodedObject)
+            print(tempArray, "tempArray")
+        }
+        // 3
+        // Finish decoding all Art objects. Thus assign tempArray to array.
+            artworksArray = tempArray
+
+    }
+}
 
 // EXAMPLE RESPONSE:
 //

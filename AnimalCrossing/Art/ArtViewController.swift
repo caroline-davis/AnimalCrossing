@@ -33,19 +33,15 @@ class ArtViewController: UIViewController, UITableViewDataSource {
                 case .finished:
                     print ("finished")
                 case .failure:
-                    print(result, "here")
+                    print(result, "result")
                     print("error")
                 }
             } receiveValue: { [weak self] value in
-                print("hello")
                 print(value)
 //                self?.artworks = value
                 self?.tableView.reloadData()
             }
             .store(in: &subscriptions)
-
-
-        
     }
 
     func setStyles() {
