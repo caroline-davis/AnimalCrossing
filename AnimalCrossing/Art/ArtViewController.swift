@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class ArtViewController: UIViewController, UITableViewDataSource {
+class ArtViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var spinnerView: UIActivityIndicatorView!
@@ -20,11 +20,12 @@ class ArtViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.isNavigationBarHidden = true
+
         tableView.register(UINib(nibName: "ArtTableViewCell", bundle: nil), forCellReuseIdentifier: ArtTableViewCell.identifier)
 
         tableView.dataSource = self
-
-        setStyles()
+        tableView.delegate = self
 
         artViewModel
             .getArt(spinner: spinnerView)
@@ -42,6 +43,8 @@ class ArtViewController: UIViewController, UITableViewDataSource {
                 self?.tableView.reloadData()
             }
             .store(in: &subscriptions)
+
+        setStyles()
     }
 
     func setStyles() {
@@ -50,7 +53,6 @@ class ArtViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(models.count)
         return models.count
     }
 
@@ -58,10 +60,20 @@ class ArtViewController: UIViewController, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ArtTableViewCell.identifier) as? ArtTableViewCell else {
             fatalError()
         }
-
         cell.configure(with: models[indexPath.row])
-        cell.layoutMargins = UIEdgeInsets.zero
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let items = models[indexPath.row]
+
+        if let vc = UIStoryboard(name: "ArtDetail", bundle: nil).instantiateViewController(identifier: "ArtDetailViewController") as? ArtDetailViewController {
+
+            let artDetailViewModel = ArtDetailViewModel(selectedItem: items)
+            vc.artDetailViewModel = artDetailViewModel
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }

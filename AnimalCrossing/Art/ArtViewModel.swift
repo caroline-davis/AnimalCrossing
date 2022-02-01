@@ -27,7 +27,6 @@ class ArtViewModel {
                     }
             })
             .map {
-                print("the data:", $0.data)
                 return $0.data
             }
             .decode(type: ArtResponse.self, decoder: JSONDecoder())

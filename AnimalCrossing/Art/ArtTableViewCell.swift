@@ -18,23 +18,15 @@ class ArtTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         artImageView.contentMode = .scaleAspectFit
-        artLabel.text = "testing"
+        layoutMargins = UIEdgeInsets.zero
     }
 
     public func configure(with artArray: Art) {
         artLabel.text = artArray.name["name-USen"]?.capitalized
 
         let imgURL = URL(string: artArray.imageUrl)!
-    
         artImageView.sd_imageIndicator = SDWebImageActivityIndicator.gray
         artImageView.sd_setImage(with: imgURL)
-    }
-
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

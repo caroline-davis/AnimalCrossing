@@ -19,8 +19,6 @@ class HomeViewModel {
     var hobby = "Hobby:"
     var catchPhrase = "Catch Phrase:"
 
-    // https://acnhapi.com/v1/villagers/{villagerID}
-
     func villagerUrl() -> URL {
         var number = ""
         for _ in 1...390 {

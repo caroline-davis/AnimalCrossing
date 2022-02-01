@@ -14,8 +14,8 @@
             filePath = "AnimalCrossing/Art/ArtViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -32,7 +32,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
                   endingLineNumber = "39"
-                  offsetFromSymbolStart = "1395">
+                  offsetFromSymbolStart = "1903">
                </Location>
                <Location
                   uuid = "2F4CAD76-AF32-4A9D-93DD-8AE824F4F22A - 702028bcf83e158a"
@@ -47,14 +47,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
                   endingLineNumber = "39"
-                  offsetFromSymbolStart = "693">
+                  offsetFromSymbolStart = "690">
                </Location>
                <Location
-                  uuid = "2F4CAD76-AF32-4A9D-93DD-8AE824F4F22A - 684b760f37292574"
+                  uuid = "2F4CAD76-AF32-4A9D-93DD-8AE824F4F22A - aae4612b835d5eb9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (AnimalCrossing.Root) -&gt; () in AnimalCrossing.ArtViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "closure #2 (AnimalCrossing.ArtResponse) -&gt; () in AnimalCrossing.ArtViewController.viewDidLoad() -&gt; ()"
                   moduleName = "AnimalCrossing"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/carolinedavis/Documents/SwiftProjects/Early_2022/AnimalCrossing/AnimalCrossing/Art/ArtViewController.swift"
@@ -62,9 +62,25 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "39"
                   endingLineNumber = "39"
-                  offsetFromSymbolStart = "97">
+                  offsetFromSymbolStart = "88">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61A48425-E084-46B4-9E48-958C324C5A26"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalCrossing/Art/ArtViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -29,6 +29,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.isNavigationBarHidden = true
+
         homeViewModel
             .getVillagers(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
@@ -37,7 +39,6 @@ class HomeViewController: UIViewController {
                 case .finished:
                     self.spinnerView.stopAnimating()
                     self.spinnerView.isHidden = true
-                    print("finished: \(Thread.isMainThread)")
                 case .failure (let error):
                     print(error)
                 }
