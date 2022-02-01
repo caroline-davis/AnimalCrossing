@@ -14,13 +14,78 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc" userLabel="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="naD-jz-FUf">
+                                <rect key="frame" x="20" y="477" width="374" height="142"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb4-oM-CdS">
+                                        <rect key="frame" x="166.5" y="0.0" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1O-XI-Iyr">
+                                        <rect key="frame" x="166.5" y="40.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mR-ig-J7z">
+                                        <rect key="frame" x="166.5" y="81" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPb-ol-pYg">
+                                        <rect key="frame" x="166.5" y="121.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReddNL" translatesAutoresizingMaskIntoConstraints="NO" id="o5H-qu-Lrx">
+                                <rect key="frame" x="0.0" y="84" width="414" height="301"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="o5H-qu-Lrx" secondAttribute="height" multiplier="414:301" id="Ytg-CB-hWh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imG-Cb-KeA">
+                                <rect key="frame" x="20" y="405" width="374" height="42"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.85691679509999996" green="0.9639204052" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="naD-jz-FUf" secondAttribute="trailing" constant="20" id="7Dp-V3-rze"/>
+                            <constraint firstItem="o5H-qu-Lrx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7zG-qD-2NN"/>
+                            <constraint firstItem="o5H-qu-Lrx" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="KUB-PB-JVW"/>
+                            <constraint firstItem="naD-jz-FUf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="N4i-kM-gL2"/>
+                            <constraint firstItem="o5H-qu-Lrx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="WXb-8h-T7i"/>
+                            <constraint firstItem="imG-Cb-KeA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="iCc-tI-gHb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="imG-Cb-KeA" secondAttribute="trailing" constant="20" id="jdR-nX-IKV"/>
+                            <constraint firstItem="naD-jz-FUf" firstAttribute="top" secondItem="imG-Cb-KeA" secondAttribute="bottom" constant="30" id="kFJ-qX-Qes"/>
+                            <constraint firstItem="imG-Cb-KeA" firstAttribute="top" secondItem="o5H-qu-Lrx" secondAttribute="bottom" constant="20" id="lxl-mh-c2f"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artDescription" destination="zb4-oM-CdS" id="6dn-uK-mrQ"/>
+                        <outlet property="artName" destination="imG-Cb-KeA" id="Gan-MP-Wwf"/>
+                        <outlet property="buyPrice" destination="5mR-ig-J7z" id="CAK-J7-G2F"/>
+                        <outlet property="hasFake" destination="f1O-XI-Iyr" id="g9a-O1-HH7"/>
+                        <outlet property="imageView" destination="o5H-qu-Lrx" id="Wfc-Ft-YNz"/>
+                        <outlet property="sellPrice" destination="qPb-ol-pYg" id="hCg-xx-NTT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100" y="66"/>
+            <point key="canvasLocation" x="-100.00000000000001" y="65.625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ReddNL" width="318" height="599"/>
+    </resources>
 </document>
