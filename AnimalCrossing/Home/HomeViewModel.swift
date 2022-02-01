@@ -18,6 +18,7 @@ class HomeViewModel {
     var gender = "Gender:"
     var hobby = "Hobby:"
     var catchPhrase = "Catch Phrase:"
+    var saying = "Saying:"
 
     func villagerUrl() -> URL {
         var number = ""

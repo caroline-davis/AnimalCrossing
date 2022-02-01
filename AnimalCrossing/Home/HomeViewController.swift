@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var hobbyLabel: UILabel!
     @IBOutlet weak var catchPhraseLabel: UILabel!
+    @IBOutlet weak var sayingLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var spinnerView: UIActivityIndicatorView!
 
@@ -57,6 +58,7 @@ class HomeViewController: UIViewController {
                 self?.genderLabel.text = "\(self?.homeViewModel.gender ?? "") \(val.gender)"
                 self?.hobbyLabel.text = "\(self?.homeViewModel.hobby ?? "") \(val.hobby)"
                 self?.catchPhraseLabel.text = "\(self?.homeViewModel.catchPhrase ?? "") \(val.catchPhrase.capitalized)"
+                self?.sayingLabel.text = "\(self?.homeViewModel.saying ?? "") \(val.saying)"
             }
             .store(in: &subscriptions)
 
