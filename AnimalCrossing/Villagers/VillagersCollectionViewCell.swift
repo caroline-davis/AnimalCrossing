@@ -19,7 +19,7 @@ class VillagersCollectionViewCell: UICollectionViewCell {
         layoutMargins = UIEdgeInsets.zero
     }
 
-    public func configure(with villagersArray: Villagers) {
+    public func configure(with villagersArray: Villager) {
 
         let imgURL = URL(string: villagersArray.imageUrl)!
         imageView.sd_imageIndicator = SDWebImageActivityIndicator.gray

@@ -27,6 +27,16 @@ class ArtViewController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.dataSource = self
         tableView.delegate = self
 
+        getData()
+        setStyles()
+    }
+
+    func setStyles() {
+        tableView.layoutMargins = UIEdgeInsets.zero
+        tableView.separatorInset = UIEdgeInsets.zero
+    }
+
+    func getData() {
         artViewModel
             .getArt(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
@@ -43,13 +53,6 @@ class ArtViewController: UIViewController, UITableViewDataSource, UITableViewDel
                 self?.tableView.reloadData()
             }
             .store(in: &subscriptions)
-
-        setStyles()
-    }
-
-    func setStyles() {
-        tableView.layoutMargins = UIEdgeInsets.zero
-        tableView.separatorInset = UIEdgeInsets.zero
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

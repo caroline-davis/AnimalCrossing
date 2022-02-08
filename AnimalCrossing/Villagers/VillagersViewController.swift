@@ -15,7 +15,7 @@ class VillagersViewController: UIViewController, UICollectionViewDelegate, UICol
 
     var villagersViewModel = VillagersViewModel()
     var subscriptions: [AnyCancellable] = []
-    var models = [Villagers]()
+    var models = [Villager]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,11 @@ class VillagersViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionView.delegate = self
         collectionView.dataSource = self
 
+        getData()
+
+    }
+
+    func getData() {
         villagersViewModel
             .getVillagers(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
@@ -42,7 +47,6 @@ class VillagersViewController: UIViewController, UICollectionViewDelegate, UICol
                 self?.collectionView.reloadData()
             }
             .store(in: &subscriptions)
-
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

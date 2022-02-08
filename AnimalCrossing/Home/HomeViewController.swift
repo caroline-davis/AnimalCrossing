@@ -32,6 +32,21 @@ class HomeViewController: UIViewController {
 
         self.navigationController?.isNavigationBarHidden = true
 
+        setData()
+        setInitialItems()
+        setStyles()
+    }
+
+    func setInitialItems() {
+        headingLabel.text = homeViewModel.heading
+    }
+
+    func setStyles() {
+        containerView.layer.cornerRadius = 5
+        villagerImageView.layer.cornerRadius = 5
+    }
+
+    func setData() {
         homeViewModel
             .getVillager(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
@@ -61,18 +76,6 @@ class HomeViewController: UIViewController {
                 self?.sayingLabel.text = "\(self?.homeViewModel.saying ?? "") \(val.saying)"
             }
             .store(in: &subscriptions)
-
-        setInitialItems()
-        setStyles()
     }
-
-    func setInitialItems() {
-        headingLabel.text = homeViewModel.heading
-    }
-
-    func setStyles() {
-        containerView.layer.cornerRadius = 5
-        villagerImageView.layer.cornerRadius = 5
-    }
-
 }
+
