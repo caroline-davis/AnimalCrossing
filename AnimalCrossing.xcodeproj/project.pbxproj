@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F03EFD2E27A2443900A21E68 /* ArtTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03EFD2D27A2443900A21E68 /* ArtTableViewCell.swift */; };
+		F048F3CD27B1DCD0003B3B37 /* VillagersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F048F3CC27B1DCCF003B3B37 /* VillagersViewController.swift */; };
+		F048F3CF27B1E05B003B3B37 /* VillagersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F048F3CE27B1E05B003B3B37 /* VillagersViewModel.swift */; };
+		F048F3D327B1F808003B3B37 /* VillagersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F048F3D227B1F808003B3B37 /* VillagersCollectionViewCell.swift */; };
+		F048F3D927B2113A003B3B37 /* VillagersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F048F3D727B2113A003B3B37 /* VillagersCollectionViewCell.xib */; };
 		F05CC82127A26024004B4206 /* ArtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05CC82027A26024004B4206 /* ArtTableViewCell.xib */; };
 		F067F5D927A2166900518A04 /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5D827A2166900518A04 /* Art.swift */; };
 		F067F5DB27A21CDF00518A04 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5DA27A21CDF00518A04 /* ArtViewController.swift */; };
@@ -28,6 +32,10 @@
 
 /* Begin PBXFileReference section */
 		F03EFD2D27A2443900A21E68 /* ArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtTableViewCell.swift; sourceTree = "<group>"; };
+		F048F3CC27B1DCCF003B3B37 /* VillagersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersViewController.swift; sourceTree = "<group>"; };
+		F048F3CE27B1E05B003B3B37 /* VillagersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersViewModel.swift; sourceTree = "<group>"; };
+		F048F3D227B1F808003B3B37 /* VillagersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersCollectionViewCell.swift; sourceTree = "<group>"; };
+		F048F3D727B2113A003B3B37 /* VillagersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VillagersCollectionViewCell.xib; sourceTree = "<group>"; };
 		F05CC82027A26024004B4206 /* ArtTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtTableViewCell.xib; sourceTree = "<group>"; };
 		F067F5D827A2166900518A04 /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
 		F067F5DA27A21CDF00518A04 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F048F3CB27B1DC8C003B3B37 /* Villagers */ = {
+			isa = PBXGroup;
+			children = (
+				F048F3CC27B1DCCF003B3B37 /* VillagersViewController.swift */,
+				F048F3CE27B1E05B003B3B37 /* VillagersViewModel.swift */,
+				F048F3D227B1F808003B3B37 /* VillagersCollectionViewCell.swift */,
+				F048F3D727B2113A003B3B37 /* VillagersCollectionViewCell.xib */,
+			);
+			path = Villagers;
+			sourceTree = "<group>";
+		};
 		F067F5D727A214C900518A04 /* Art */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +138,7 @@
 			children = (
 				F0EC8F88279A5FFA00CFB5C1 /* Models */,
 				F0F067B5279A271E0026EE6A /* Home */,
+				F048F3CB27B1DC8C003B3B37 /* Villagers */,
 				F0F067A1279A25F50026EE6A /* AppDelegate.swift */,
 				F067F5D727A214C900518A04 /* Art */,
 				F0F067A3279A25F50026EE6A /* SceneDelegate.swift */,
@@ -205,6 +225,7 @@
 				F0E1EA8B27A8BC0800BB21E0 /* ArtDetail.storyboard in Resources */,
 				F05CC82127A26024004B4206 /* ArtTableViewCell.xib in Resources */,
 				F0F067AE279A25F60026EE6A /* LaunchScreen.storyboard in Resources */,
+				F048F3D927B2113A003B3B37 /* VillagersCollectionViewCell.xib in Resources */,
 				F0F067AB279A25F60026EE6A /* Assets.xcassets in Resources */,
 				F0F067A9279A25F50026EE6A /* Main.storyboard in Resources */,
 			);
@@ -219,8 +240,11 @@
 			files = (
 				F067F5DB27A21CDF00518A04 /* ArtViewController.swift in Sources */,
 				F0E1EA8827A8BA5500BB21E0 /* ArtDetailViewModel.swift in Sources */,
+				F048F3CD27B1DCD0003B3B37 /* VillagersViewController.swift in Sources */,
 				F0F067A6279A25F50026EE6A /* HomeViewController.swift in Sources */,
+				F048F3D327B1F808003B3B37 /* VillagersCollectionViewCell.swift in Sources */,
 				F0F067A2279A25F50026EE6A /* AppDelegate.swift in Sources */,
+				F048F3CF27B1E05B003B3B37 /* VillagersViewModel.swift in Sources */,
 				F069948027A370010097A539 /* ArtViewModel.swift in Sources */,
 				F03EFD2E27A2443900A21E68 /* ArtTableViewCell.swift in Sources */,
 				F0F067A4279A25F50026EE6A /* SceneDelegate.swift in Sources */,

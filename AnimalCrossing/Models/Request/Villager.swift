@@ -55,6 +55,47 @@ public struct Villager: Codable {
     }
 }
 
+
+public struct Villagers: Decodable {
+    public var imageUrl: String
+
+    enum CodingKeys: String, CodingKey {
+        case imageUrl = "image_uri"
+    }
+
+    public init(imageUrl: String) {
+        self.imageUrl = imageUrl
+    }
+}
+
+struct VillagersResponse: Decodable {
+    let villagersArray: [Villagers]
+
+    private struct DynamicCodingKeys: CodingKey {
+        var stringValue: String
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+        var intValue: Int?
+        init?(intValue: Int) {
+            return nil
+        }
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: DynamicCodingKeys.self)
+        var tempArray = [Villagers]()
+
+        for key in container.allKeys {
+            let decodedObject = try container.decode(Villagers.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
+            tempArray.append(decodedObject)
+        }
+        villagersArray = tempArray
+    }
+
+}
+
+
 // EXAMPLE RESPONSE:
 //
 //{

@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
 
         homeViewModel
-            .getVillagers(spinner: spinnerView)
+            .getVillager(spinner: spinnerView)
             .receive(on: DispatchQueue.main)
             .sink { res in
                 switch res {
