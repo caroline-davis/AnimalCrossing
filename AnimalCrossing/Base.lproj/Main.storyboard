@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Art-->
         <scene sceneID="FaD-OH-mcv">
             <objects>
                 <viewController id="rCA-QM-WdH" customClass="ArtViewController" customModule="AnimalCrossing" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                             <constraint firstItem="1n0-pB-tbe" firstAttribute="centerX" secondItem="Y4x-qa-Hfw" secondAttribute="centerX" id="a4t-oz-zyv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ot2-4Y-rEC"/>
+                    <tabBarItem key="tabBarItem" title="Art" id="ot2-4Y-rEC"/>
                     <navigationItem key="navigationItem" id="fed-o0-gjg"/>
                     <connections>
                         <outlet property="spinnerView" destination="ccD-BE-lfA" id="Jod-L5-wzX"/>
@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="480" y="-90"/>
         </scene>
-        <!--Item-->
+        <!--Villagers-->
         <scene sceneID="QNW-Wa-fB1">
             <objects>
                 <viewController id="DVN-2j-iOK" customClass="VillagersViewController" customModule="AnimalCrossing" customModuleProvider="target" sceneMemberID="viewController">
@@ -89,7 +89,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="31w-9U-AqP" customClass="VillagersCollectionViewCell" customModule="AnimalCrossing" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="villagersCell" id="31w-9U-AqP" customClass="VillagersCollectionViewCell" customModule="AnimalCrossing" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="USh-cg-kfi">
@@ -117,7 +117,7 @@
                             <constraint firstItem="Xfs-ax-Ldw" firstAttribute="top" secondItem="871-uy-UtZ" secondAttribute="bottom" constant="23" id="vs0-Dp-BCY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="C7g-Jc-7bw"/>
+                    <tabBarItem key="tabBarItem" title="Villagers" id="C7g-Jc-7bw"/>
                     <navigationItem key="navigationItem" id="VWi-Qo-l6f"/>
                     <connections>
                         <outlet property="collectionView" destination="Xfs-ax-Ldw" id="yxY-cI-TxN"/>
@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="479.71014492753625" y="571.875"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="aZR-ZH-akM">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="GzG-9V-REo" customClass="HomeViewController" customModule="AnimalCrossing" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,7 +255,7 @@
                             <constraint firstItem="NOc-3T-XI2" firstAttribute="trailing" secondItem="oL3-5S-IJG" secondAttribute="trailing" id="rBx-i7-jYK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="tpc-o9-quA"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="tpc-o9-quA"/>
                     <navigationItem key="navigationItem" id="DPw-68-6LA"/>
                     <connections>
                         <outlet property="birthdayLabel" destination="vZ3-av-0R5" id="nZx-6f-A4Z"/>

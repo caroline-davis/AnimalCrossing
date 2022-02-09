@@ -16,6 +16,9 @@
 		F067F5D927A2166900518A04 /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5D827A2166900518A04 /* Art.swift */; };
 		F067F5DB27A21CDF00518A04 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5DA27A21CDF00518A04 /* ArtViewController.swift */; };
 		F069948027A370010097A539 /* ArtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069947F27A370010097A539 /* ArtViewModel.swift */; };
+		F0C5F5E127B33DF00022D54A /* VillagersDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5F5E027B33DF00022D54A /* VillagersDetailViewController.swift */; };
+		F0C5F5E327B33E100022D54A /* VillagersDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C5F5E227B33E100022D54A /* VillagersDetail.storyboard */; };
+		F0C5F5E527B33E2F0022D54A /* VillagersDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C5F5E427B33E2F0022D54A /* VillagersDetailViewModel.swift */; };
 		F0E1EA8427A89EE800BB21E0 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F0E1EA8327A89EE800BB21E0 /* SDWebImage */; };
 		F0E1EA8627A8BA3A00BB21E0 /* ArtDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1EA8527A8BA3A00BB21E0 /* ArtDetailViewController.swift */; };
 		F0E1EA8827A8BA5500BB21E0 /* ArtDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E1EA8727A8BA5500BB21E0 /* ArtDetailViewModel.swift */; };
@@ -40,6 +43,9 @@
 		F067F5D827A2166900518A04 /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
 		F067F5DA27A21CDF00518A04 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		F069947F27A370010097A539 /* ArtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewModel.swift; sourceTree = "<group>"; };
+		F0C5F5E027B33DF00022D54A /* VillagersDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersDetailViewController.swift; sourceTree = "<group>"; };
+		F0C5F5E227B33E100022D54A /* VillagersDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VillagersDetail.storyboard; sourceTree = "<group>"; };
+		F0C5F5E427B33E2F0022D54A /* VillagersDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersDetailViewModel.swift; sourceTree = "<group>"; };
 		F0E1EA8527A8BA3A00BB21E0 /* ArtDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewController.swift; sourceTree = "<group>"; };
 		F0E1EA8727A8BA5500BB21E0 /* ArtDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDetailViewModel.swift; sourceTree = "<group>"; };
 		F0E1EA8A27A8BC0800BB21E0 /* ArtDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArtDetail.storyboard; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 				F048F3CE27B1E05B003B3B37 /* VillagersViewModel.swift */,
 				F048F3D227B1F808003B3B37 /* VillagersCollectionViewCell.swift */,
 				F048F3D727B2113A003B3B37 /* VillagersCollectionViewCell.xib */,
+				F0C5F5DF27B33D930022D54A /* VillagersDetail */,
 			);
 			path = Villagers;
 			sourceTree = "<group>";
@@ -88,6 +95,16 @@
 				F0E1EA8927A8BBE900BB21E0 /* ArtDetail */,
 			);
 			path = Art;
+			sourceTree = "<group>";
+		};
+		F0C5F5DF27B33D930022D54A /* VillagersDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F0C5F5E027B33DF00022D54A /* VillagersDetailViewController.swift */,
+				F0C5F5E427B33E2F0022D54A /* VillagersDetailViewModel.swift */,
+				F0C5F5E227B33E100022D54A /* VillagersDetail.storyboard */,
+			);
+			path = VillagersDetail;
 			sourceTree = "<group>";
 		};
 		F0E1EA8927A8BBE900BB21E0 /* ArtDetail */ = {
@@ -139,8 +156,8 @@
 				F0EC8F88279A5FFA00CFB5C1 /* Models */,
 				F0F067B5279A271E0026EE6A /* Home */,
 				F048F3CB27B1DC8C003B3B37 /* Villagers */,
-				F0F067A1279A25F50026EE6A /* AppDelegate.swift */,
 				F067F5D727A214C900518A04 /* Art */,
+				F0F067A1279A25F50026EE6A /* AppDelegate.swift */,
 				F0F067A3279A25F50026EE6A /* SceneDelegate.swift */,
 				F0F067A7279A25F50026EE6A /* Main.storyboard */,
 				F0F067AA279A25F60026EE6A /* Assets.xcassets */,
@@ -222,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0C5F5E327B33E100022D54A /* VillagersDetail.storyboard in Resources */,
 				F0E1EA8B27A8BC0800BB21E0 /* ArtDetail.storyboard in Resources */,
 				F05CC82127A26024004B4206 /* ArtTableViewCell.xib in Resources */,
 				F0F067AE279A25F60026EE6A /* LaunchScreen.storyboard in Resources */,
@@ -239,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F067F5DB27A21CDF00518A04 /* ArtViewController.swift in Sources */,
+				F0C5F5E527B33E2F0022D54A /* VillagersDetailViewModel.swift in Sources */,
 				F0E1EA8827A8BA5500BB21E0 /* ArtDetailViewModel.swift in Sources */,
 				F048F3CD27B1DCD0003B3B37 /* VillagersViewController.swift in Sources */,
 				F0F067A6279A25F50026EE6A /* HomeViewController.swift in Sources */,
@@ -251,6 +270,7 @@
 				F0F067B7279A273C0026EE6A /* HomeViewModel.swift in Sources */,
 				F0E1EA8627A8BA3A00BB21E0 /* ArtDetailViewController.swift in Sources */,
 				F0EC8F8A279A601A00CFB5C1 /* Villager.swift in Sources */,
+				F0C5F5E127B33DF00022D54A /* VillagersDetailViewController.swift in Sources */,
 				F067F5D927A2166900518A04 /* Art.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

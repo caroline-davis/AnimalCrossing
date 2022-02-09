@@ -53,7 +53,6 @@ class VillagersViewController: UIViewController, UICollectionViewDelegate, UICol
         return models.count
     }
 
-
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VillagersCollectionViewCell.identifier, for: indexPath) as? VillagersCollectionViewCell else {
@@ -63,4 +62,17 @@ class VillagersViewController: UIViewController, UICollectionViewDelegate, UICol
 
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        let items = models[indexPath.row]
+
+        if let vc = UIStoryboard(name: "VillagersDetail", bundle: nil).instantiateViewController(identifier: "VillagersDetailViewController") as? VillagersDetailViewController {
+
+            let villagersDetailViewModel = VillagersDetailViewModel(selectedItem: items)
+            vc.villagersDetailViewModel = villagersDetailViewModel
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+
 }
