@@ -22,7 +22,19 @@ class VillagersDetailViewModel {
     }
 
     var personality: String {
-        return selectedItem.personality
+        return "Type: \(selectedItem.personality)"
+    }
+
+    var species: String {
+        return  "Species: \(selectedItem.species)"
+    }
+
+    var catchPhrase: String {
+        return  "Catch Phrase: \(selectedItem.catchPhrase)"
+    }
+
+    var saying: String {
+        return  "Saying: \(selectedItem.saying)"
     }
 
     func setImage(villagerImageView: UIImageView) {
