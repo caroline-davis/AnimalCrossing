@@ -21,9 +21,9 @@ class HomeViewModel {
     var saying = "Saying:"
 
     func villagerUrl() -> URL {
-        var number = ""
+        var number = 0
         for _ in 1...390 {
-            number = String(Int.random(in: 1..<390))
+            number = Int.random(in: 1..<390)
         }
         return URL(string: "https://acnhapi.com/v1/villagers/\(number)") ?? URL(string:"https://acnhapi.com/v1/villagers/1")!
     }

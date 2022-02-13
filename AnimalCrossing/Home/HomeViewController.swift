@@ -31,9 +31,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationController?.isNavigationBarHidden = true
-
-        setData()
         setInitialItems()
+        setData()
         setStyles()
     }
 

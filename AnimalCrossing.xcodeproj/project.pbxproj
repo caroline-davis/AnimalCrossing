@@ -13,6 +13,10 @@
 		F048F3D327B1F808003B3B37 /* VillagersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F048F3D227B1F808003B3B37 /* VillagersCollectionViewCell.swift */; };
 		F048F3D927B2113A003B3B37 /* VillagersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F048F3D727B2113A003B3B37 /* VillagersCollectionViewCell.xib */; };
 		F05CC82127A26024004B4206 /* ArtTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05CC82027A26024004B4206 /* ArtTableViewCell.xib */; };
+		F05E109827B5EBDB00DB7501 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E109727B5EBDB00DB7501 /* HomeViewModelTests.swift */; };
+		F05E10A127B60A4A00DB7501 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E10A027B60A4A00DB7501 /* HomeViewControllerTests.swift */; };
+		F05E10A527B621B400DB7501 /* VillagersDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E10A427B621B400DB7501 /* VillagersDetailViewModelTests.swift */; };
+		F05E10A727B623CF00DB7501 /* VillagersDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E10A627B623CF00DB7501 /* VillagersDetailViewControllerTests.swift */; };
 		F067F5D927A2166900518A04 /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5D827A2166900518A04 /* Art.swift */; };
 		F067F5DB27A21CDF00518A04 /* ArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067F5DA27A21CDF00518A04 /* ArtViewController.swift */; };
 		F069948027A370010097A539 /* ArtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F069947F27A370010097A539 /* ArtViewModel.swift */; };
@@ -33,6 +37,16 @@
 		F0F067B7279A273C0026EE6A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F067B6279A273C0026EE6A /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F05E109A27B5EBDB00DB7501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0F06796279A25F50026EE6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0F0679D279A25F50026EE6A;
+			remoteInfo = AnimalCrossing;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F03EFD2D27A2443900A21E68 /* ArtTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtTableViewCell.swift; sourceTree = "<group>"; };
 		F048F3CC27B1DCCF003B3B37 /* VillagersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +54,12 @@
 		F048F3D227B1F808003B3B37 /* VillagersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersCollectionViewCell.swift; sourceTree = "<group>"; };
 		F048F3D727B2113A003B3B37 /* VillagersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VillagersCollectionViewCell.xib; sourceTree = "<group>"; };
 		F05CC82027A26024004B4206 /* ArtTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtTableViewCell.xib; sourceTree = "<group>"; };
+		F05E109527B5EBDB00DB7501 /* AnimalCrossingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalCrossingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05E109727B5EBDB00DB7501 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		F05E109927B5EBDB00DB7501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05E10A027B60A4A00DB7501 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		F05E10A427B621B400DB7501 /* VillagersDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersDetailViewModelTests.swift; sourceTree = "<group>"; };
+		F05E10A627B623CF00DB7501 /* VillagersDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillagersDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		F067F5D827A2166900518A04 /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
 		F067F5DA27A21CDF00518A04 /* ArtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewController.swift; sourceTree = "<group>"; };
 		F069947F27A370010097A539 /* ArtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewModel.swift; sourceTree = "<group>"; };
@@ -62,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F05E109227B5EBDB00DB7501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F0679B279A25F50026EE6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,6 +110,42 @@
 				F0C5F5DF27B33D930022D54A /* VillagersDetail */,
 			);
 			path = Villagers;
+			sourceTree = "<group>";
+		};
+		F05E109627B5EBDB00DB7501 /* AnimalCrossingTests */ = {
+			isa = PBXGroup;
+			children = (
+				F05E10A327B620B100DB7501 /* Art */,
+				F05E10A227B620A900DB7501 /* Villagers */,
+				F05E109F27B5EBF900DB7501 /* Home */,
+				F05E109927B5EBDB00DB7501 /* Info.plist */,
+			);
+			path = AnimalCrossingTests;
+			sourceTree = "<group>";
+		};
+		F05E109F27B5EBF900DB7501 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F05E109727B5EBDB00DB7501 /* HomeViewModelTests.swift */,
+				F05E10A027B60A4A00DB7501 /* HomeViewControllerTests.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F05E10A227B620A900DB7501 /* Villagers */ = {
+			isa = PBXGroup;
+			children = (
+				F05E10A427B621B400DB7501 /* VillagersDetailViewModelTests.swift */,
+				F05E10A627B623CF00DB7501 /* VillagersDetailViewControllerTests.swift */,
+			);
+			path = Villagers;
+			sourceTree = "<group>";
+		};
+		F05E10A327B620B100DB7501 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Art;
 			sourceTree = "<group>";
 		};
 		F067F5D727A214C900518A04 /* Art */ = {
@@ -138,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F067A0279A25F50026EE6A /* AnimalCrossing */,
+				F05E109627B5EBDB00DB7501 /* AnimalCrossingTests */,
 				F0F0679F279A25F50026EE6A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -146,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				F0F0679E279A25F50026EE6A /* AnimalCrossing.app */,
+				F05E109527B5EBDB00DB7501 /* AnimalCrossingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +244,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F05E109427B5EBDB00DB7501 /* AnimalCrossingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F05E109C27B5EBDB00DB7501 /* Build configuration list for PBXNativeTarget "AnimalCrossingTests" */;
+			buildPhases = (
+				F05E109127B5EBDB00DB7501 /* Sources */,
+				F05E109227B5EBDB00DB7501 /* Frameworks */,
+				F05E109327B5EBDB00DB7501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F05E109B27B5EBDB00DB7501 /* PBXTargetDependency */,
+			);
+			name = AnimalCrossingTests;
+			productName = AnimalCrossingTests;
+			productReference = F05E109527B5EBDB00DB7501 /* AnimalCrossingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F0F0679D279A25F50026EE6A /* AnimalCrossing */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0F067B2279A25F60026EE6A /* Build configuration list for PBXNativeTarget "AnimalCrossing" */;
@@ -208,6 +291,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					F05E109427B5EBDB00DB7501 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = F0F0679D279A25F50026EE6A;
+					};
 					F0F0679D279A25F50026EE6A = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -230,11 +317,19 @@
 			projectRoot = "";
 			targets = (
 				F0F0679D279A25F50026EE6A /* AnimalCrossing */,
+				F05E109427B5EBDB00DB7501 /* AnimalCrossingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F05E109327B5EBDB00DB7501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F0679C279A25F50026EE6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +347,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F05E109127B5EBDB00DB7501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F05E10A727B623CF00DB7501 /* VillagersDetailViewControllerTests.swift in Sources */,
+				F05E109827B5EBDB00DB7501 /* HomeViewModelTests.swift in Sources */,
+				F05E10A127B60A4A00DB7501 /* HomeViewControllerTests.swift in Sources */,
+				F05E10A527B621B400DB7501 /* VillagersDetailViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F0679A279A25F50026EE6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,6 +383,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F05E109B27B5EBDB00DB7501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0F0679D279A25F50026EE6A /* AnimalCrossing */;
+			targetProxy = F05E109A27B5EBDB00DB7501 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F0F067A7279A25F50026EE6A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -297,6 +411,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F05E109D27B5EBDB00DB7501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D892J442TF;
+				INFOPLIST_FILE = AnimalCrossingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caroline-davis.AnimalCrossingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalCrossing.app/AnimalCrossing";
+			};
+			name = Debug;
+		};
+		F05E109E27B5EBDB00DB7501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D892J442TF;
+				INFOPLIST_FILE = AnimalCrossingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.caroline-davis.AnimalCrossingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalCrossing.app/AnimalCrossing";
+			};
+			name = Release;
+		};
 		F0F067B0279A25F60026EE6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -454,6 +608,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F05E109C27B5EBDB00DB7501 /* Build configuration list for PBXNativeTarget "AnimalCrossingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F05E109D27B5EBDB00DB7501 /* Debug */,
+				F05E109E27B5EBDB00DB7501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F0F06799279A25F50026EE6A /* Build configuration list for PBXProject "AnimalCrossing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
